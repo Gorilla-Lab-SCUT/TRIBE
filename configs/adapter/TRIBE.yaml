@@ -1,0 +1,14 @@
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  WD: 0.
+
+ADAPTER:
+  NAME: tribe
+  TRIBE:
+    ETA: 0.01      # 0.01 on CIFAR10, 0.05 on CIFAR100, 0.5 on ImageNet1K. This term is related with the number of categories. [Roughly follow max(0.0005 * K., 0.01)]
+    GAMMA: 0.     # 0.0 on CIFAR10, 0.1 on CIFAR100, 0.5 on ImageNet1K. More details please see the paper. [Little sensitive]
+    H0: 0.05       # 0.05 on CIFAR10, 0.2 on CIFAR100, 0.4 on ImageNet1K. Entropy threshold is related with the accuracy of source domain. [Not sensitive]
+    LAMBDA: 0.5    # This term is usually constant as 0.5
+

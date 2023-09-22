@@ -1,0 +1,35 @@
+MODEL:
+  ARCH: Standard
+
+INPUT:
+  SIZE: 
+    - 32 
+    - 32
+
+TEST:
+  BATCH_SIZE: 64
+
+OPTIM:
+  LR: 1e-3
+
+CORRUPTION:
+  DATASET: gradualCifar10
+  NUM_CLASS: 10
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression

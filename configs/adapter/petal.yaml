@@ -1,0 +1,18 @@
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  WD: 0.
+
+ADAPTER:
+  NAME: petal
+  PETAL:
+    STEPS: 1
+    EPISODIC: False
+    MT_ALPHA: 0.999
+    PERC: 0.03
+    RST_M: 1.0
+    SPW: 1e-9
+    AP: 0.92   # 0.92 on CIFAR10, 0.72 on CIFAR100
+
+

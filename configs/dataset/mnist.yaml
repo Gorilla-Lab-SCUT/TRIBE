@@ -1,0 +1,37 @@
+MODEL:
+  ARCH: ResNet18
+
+INPUT:
+  SIZE: 
+    - 28
+    - 28
+
+TEST:
+  BATCH_SIZE: 64
+
+OPTIM:
+  LR: 1e-3
+
+CORRUPTION:
+  DATASET: mnist
+  NUM_CLASS: 10
+  SEVERITY:
+    - 5
+  TYPE:
+    - shot_noise
+    - impulse_noise
+    - glass_blur
+    - motion_blur
+    - shear
+    - scale
+    - rotate
+    - brightness
+    - translate
+    - stripe
+    - fog
+    - spatter
+    - dotted_line
+    - zigzag
+    - canny_edges
+
+    

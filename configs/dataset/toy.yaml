@@ -1,0 +1,13 @@
+MODEL:
+  ARCH: Toy
+
+TEST:
+  BATCH_SIZE: 248
+
+OPTIM:
+  LR: 1e-3
+
+CORRUPTION:
+  DATASET: toy
+  NUM_CLASS: 10
+  

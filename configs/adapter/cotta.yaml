@@ -1,0 +1,16 @@
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  WD: 0.
+
+ADAPTER:
+  NAME: cotta
+  COTTA:
+    STEPS: 1
+    EPISODIC: False
+    MT_ALPHA: 0.999
+    RST_M: 0.01
+    AP: 0.92   # 0.92 on CIFAR10, 0.72 on CIFAR100
+    
+

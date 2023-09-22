@@ -1,0 +1,6 @@
+LOADER:
+  SAMPLER:
+    TYPE: "gli_tta"
+    IMB_FACTOR: 10           # 10, 100, 200
+    CLASS_RATIO: "constant"  # "constant" for GLI-TTA-F or "random" for GLI-TTA-V
+    GAMMA: 0.1

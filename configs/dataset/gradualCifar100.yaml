@@ -1,0 +1,36 @@
+MODEL:
+  ARCH: Hendrycks2020AugMix_ResNeXt
+
+
+INPUT:
+  SIZE: 
+    - 32 
+    - 32
+
+TEST:
+  BATCH_SIZE: 64
+
+OPTIM:
+  LR: 1e-3
+
+CORRUPTION:
+  DATASET: gradualCifar100
+  NUM_CLASS: 100
+  SEVERITY:
+    - 5
+  TYPE:
+    - motion_blur
+    - snow
+    - fog
+    - shot_noise
+    - defocus_blur
+    - contrast
+    - zoom_blur
+    - brightness
+    - frost
+    - elastic_transform
+    - glass_blur
+    - gaussian_noise
+    - pixelate
+    - jpeg_compression
+    - impulse_noise

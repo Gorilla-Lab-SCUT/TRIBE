@@ -5,7 +5,7 @@ from typing import Iterator, List
 from collections import defaultdict
 from numpy.random import dirichlet
 
-class GradualDomainSequence(Sampler):
+class ContinualDomainSequence(Sampler):
     def __init__(self, data_source: List[DatumBase]):
         self.data_source = data_source
     
@@ -153,7 +153,7 @@ def build_sampler(
         return LabelDirichletDomainSequence(data_source, cfg.LOADER.SAMPLER.GAMMA, cfg.TEST.BATCH_SIZE, **kwargs)
     elif cfg.LOADER.SAMPLER.TYPE == "gli_tta":
         return LabelDirichletDomainSequenceLongTailed(data_source, cfg.LOADER.SAMPLER.GAMMA, cfg.TEST.BATCH_SIZE, cfg.LOADER.SAMPLER.IMB_FACTOR, cfg.LOADER.SAMPLER.CLASS_RATIO, **kwargs)
-    elif cfg.LOADER.SAMPLER.TYPE == "gradual":
-        return GradualDomainSequence(data_source)
+    elif cfg.LOADER.SAMPLER.TYPE == "continual":
+        return ContinualDomainSequence(data_source)
     else:
         raise NotImplementedError()

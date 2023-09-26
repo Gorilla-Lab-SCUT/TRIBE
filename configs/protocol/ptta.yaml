@@ -1,3 +1,4 @@
 LOADER:
   SAMPLER:
     TYPE: "temporal"
+    GAMMA: 0.1

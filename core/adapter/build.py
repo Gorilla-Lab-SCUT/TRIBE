@@ -4,6 +4,7 @@ from .TRIBE import TRIBE
 from .lame import LAME
 from .tent import TENT
 from .pl import PL
+from .bn import BN
 from .note import NOTE
 from .ttac import TTAC
 from .eata import EATA
@@ -22,6 +23,8 @@ def build_adapter(cfg) -> type(BaseAdapter):
         return TENT
     elif cfg.ADAPTER.NAME == "pl":
         return PL
+    elif cfg.ADAPTER.NAME == "bn":
+        return BN
     elif cfg.ADAPTER.NAME == "note":
         return NOTE
     elif cfg.ADAPTER.NAME == "ttac":

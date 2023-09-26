@@ -65,7 +65,7 @@ Hint: The hyper-parameters may be modified in `./configs/adapter/TRIBE.yaml`, an
 
 ## More Implementations
 
-Apart from the TRIBE implementation, this repo has also implemented multiple mainstream TTA algorithms and TTA protocols so that you can reproduce their results simply by modifying the running command. Algorithms include `BN`, `PL`, `TENT`, `LAME`, `EATA`, `NOTE`, `TTAC` (without queue), `COTTA`, `PETAL` and `ROTTA`. TTA protocols include `single domain TTA`, `Gradual Changing Continual TTA`, `Continual TTA`, `PTTA` (proposed in ROTTA) and `GLI TTA` (proposed in this paper).
+Apart from the TRIBE implementation, this repo has also implemented multiple mainstream TTA algorithms and TTA protocols so that you can reproduce their results simply by modifying the running command. Algorithms include `BN`, `PL`, `TENT`, `LAME`, `EATA`, `NOTE`, `TTAC` (without queue), `COTTA`, `PETAL` and `ROTTA`. TTA protocols include `Single Domain TTA`, `Gradual Changing Continual TTA`, `Continual TTA`, `PTTA` (proposed in ROTTA) and `GLI TTA` (proposed in this paper).
 
 For example:
 if we want to run `ROTTA` under `Gradual Changing Continual TTA` protocol, we can run:
@@ -85,6 +85,26 @@ python GLI_TTA.py \
       -acfg configs/adapter/rotta.yaml \
       -dcfg configs/dataset/cifar10.yaml \
       -pcfg configs/protocol/continual_tta.yaml \
+      OUTPUT_DIR ROTTA/cifar10
+```
+
+Or under `Single Domain TTA` protocol, here need to modify the CORRUPTION.TYPE to one specific domain in `./configs/dataset/cifar10.yaml` and run:
+
+```
+python GLI_TTA.py \
+      -acfg configs/adapter/rotta.yaml \
+      -dcfg configs/dataset/cifar10.yaml \
+      -pcfg configs/protocol/continual_tta.yaml \
+      OUTPUT_DIR ROTTA/cifar10
+```
+
+Or under `PTTA` protocol, as
+
+```
+python GLI_TTA.py \
+      -acfg configs/adapter/rotta.yaml \
+      -dcfg configs/dataset/cifar10.yaml \
+      -pcfg configs/protocol/ptta.yaml \
       OUTPUT_DIR ROTTA/cifar10
 ```
 

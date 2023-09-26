@@ -1,21 +1,34 @@
-# TRIBE
+<h1 style='text-align:center'>Towards Real-World Test-Time Adaptation: Tri-Net Self-Training with Balanced Normalization</h1>
 
-This repository is an official implementation for [Towards Real-World Test-Time Adaptation: Tri-Net Self-Training with Balanced Normalization]().
+<h3 style='text-align:center'>
+<a href='https://yysu.site'>Yongyi Su<sup>1</sup></a>,
+<a href='https://alex-xun-xu.github.io'>Xun Xu<sup>2</sup></a>, 
+<a href='http://kuijia.site'>Kui Jia<sup>1</sup></a>
+</h3>
 
-# Preparation
+<h3 style='text-align:center'>
+<p>[1] South China Univeristy of Technology</p>
+<p>[2] Institute for Infocomm Research, A*STAR</p>
+</h3>
 
-## Installation
+<h3 style='text-align:left'>
+<p>Paper: <a href=''>ArXiv version</a>.
+</h3>
+
+## Preparation
+
+### Installation
 ```bash
 conda create -n tribe python=3.9.0
 conda activate tribe
 
-# this installs the right pip and dependencies for the fresh python
+# install pip and dependencies for the fresh python
 conda install -y ipython pip
 
-# this installs required packages
+# install required packages
 pip install -r .
 
-# this installs robustbench
+# install robustbench
 cd robustbench
 pip install .
 cd -
@@ -26,7 +39,7 @@ pip install .
 cd -
 ```
 
-## Datasets Preparation
+### Datasets Preparation
 
 Download [CIFAR-10-C](https://zenodo.org/record/2535967#.ZDETTHZBxhF), [CIFAR-100-C](https://zenodo.org/record/3555552#.ZDES-XZBxhE) and [ImageNet-C](https://zenodo.org/record/2235448). (Running the code directly also works, since it automatically downloads the data set at the first running, but it's too slow to tolerate and has high requirements on internet stability)
 
@@ -37,9 +50,9 @@ ln -s path_to_cifar100_c datasets/CIFAR-100-C
 ln -s path_to_imagenet_c datasets/ImageNet-C
 ```
 
-# Code Running
+## Code Running
 
-## Evaluate TRIBE on three datasets under GLI-TTA protocols
+### Evaluate TRIBE on three datasets under GLI-TTA protocols
 ```bash
 python GLI_TTA.py \
       -acfg configs/adapter/TRIBE.yaml \
@@ -63,7 +76,7 @@ python GLI_TTA.py \
 Hint: The hyper-parameters may be modified in `./configs/adapter/TRIBE.yaml`, and please modify them according to the suggestions written into the file.
 
 
-## More Implementations
+### More Implementations
 
 Apart from the TRIBE implementation, this repo has also implemented multiple mainstream TTA algorithms and TTA protocols so that you can reproduce their results simply by modifying the running command. Algorithms include `BN`, `PL`, `TENT`, `LAME`, `EATA`, `NOTE`, `TTAC` (without queue), `COTTA`, `PETAL` and `ROTTA`. TTA protocols include `Single Domain TTA`, `Continual TTA`, `Gradual Changing Continual TTA`, `PTTA` (proposed in ROTTA) and `GLI TTA` (proposed in this paper).
 

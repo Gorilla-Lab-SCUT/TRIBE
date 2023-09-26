@@ -15,6 +15,20 @@
 <p>Paper: <a href=''>ArXiv version</a>.
 </h3>
 
+## Global and Local Class Imbalance TTA (GLI-TTA)
+
+![](./imgs/2023_SuEtAl_TRIBE.webp)
+
+## Method Overview
+
+![](./imgs/Method.webp)
+
+### Technical Contributions:
+
+- Propose a `Balanced BatchNorm` module to alleviate the estimation bias towards local and global class-imbalanced test data. The normal BN module is subject to estimation bias when the batch data volume is small or when the batch data has class bias.
+- Propose a `Tri-Net architecture` to reduce the risk of over-adapting to local distributions and provide a stable and robust TTA procedure.
+- Combining the above two modules, TRIBE can handle different kinds of test data streams, `either i.i.d. test stream or local and global class imbalance test stream`, and adapt the model to the target domain stably and safely.
+
 ## Preparation
 
 ### Installation

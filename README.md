@@ -15,7 +15,7 @@
 <p>Paper: <a href=''>ArXiv version</a>.
 </h3>
 
-## Global and Local Class Imbalance TTA (GLI-TTA)
+## Global and Local Class Imbalanced Test-Time-Adaptation (GLI-TTA)
 
 ![](./imgs/2023_SuEtAl_TRIBE.webp)
 

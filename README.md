@@ -12,7 +12,7 @@
 </h3>
 
 <h3 style='text-align:left'>
-<p>Paper: <a href=''>ArXiv version</a>.
+<p>Paper: <a href='https://arxiv.org/abs/2309.14949'>ArXiv version</a>.
 </h3>
 
 ## Global and Local Class Imbalanced Test-Time-Adaptation (GLI-TTA)
@@ -154,4 +154,12 @@ This project is based on the following open-source projects: [rotta](https://git
 If you find our work useful in your research, please consider citing:
 
 ```
+@misc{su2023realworld,
+      title={Towards Real-World Test-Time Adaptation: Tri-Net Self-Training with Balanced Normalization}, 
+      author={Yongyi Su and Xun Xu and Kui Jia},
+      year={2023},
+      eprint={2309.14949},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
 ```

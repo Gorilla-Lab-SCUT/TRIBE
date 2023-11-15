@@ -12,7 +12,7 @@ TEST:
   # BATCH_SIZE: 408
 
 OPTIM:
-  LR: 1e-3
+  LR: 1e-3  # 1e-5 for TTAC
 
 CORRUPTION:
   DATASET: cifar10

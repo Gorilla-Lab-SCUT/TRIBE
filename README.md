@@ -6,13 +6,17 @@
 <a href='http://kuijia.site'>Kui Jia<sup>1</sup></a>
 </h3>
 
-<h3 style='text-align:center'>
+<h4 style='text-align:center'>
 <p>[1] South China Univeristy of Technology</p>
 <p>[2] Institute for Infocomm Research, A*STAR</p>
-</h3>
+</h4>
 
 <h3 style='text-align:left'>
 <p>Paper: <a href='https://arxiv.org/abs/2309.14949'>ArXiv version</a>.
+</h3>
+
+<h3 style='text-align:left'>
+<p>🔥News: This paper has been accepted by AAAI-24 🎉
 </h3>
 
 ## Global and Local Class Imbalanced Test-Time-Adaptation (GLI-TTA)

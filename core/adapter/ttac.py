@@ -138,11 +138,20 @@ class TTAC(BaseAdapter):
 
 
     def configure_model(self, model: nn.Module):
-        model.requires_grad_(True)
-
-        for module in model.modules():
-            if isinstance(module, nn.Linear):
-                module.requires_grad_(False)
+        """Configure model."""
+        model.eval()   # eval mode to avoid stochastic depth in swin. test-time normalization is still applied
+        model.requires_grad_(True)  # disable grad, to (re-)enable only necessary parts
+        # re-enable gradient for normalization layers
+        for m in model.modules():
+            if isinstance(m, nn.BatchNorm2d):
+                # force use of batch stats in train and eval modes
+                m.track_running_stats = False
+                m.running_mean = None
+                m.running_var = None
+            elif isinstance(m, nn.BatchNorm1d):
+                m.train()   # always forcing train mode in bn1d will cause problems for single sample tta
+            elif isinstance(m, nn.Linear):
+                m.requires_grad_(False)
         return model
 
 

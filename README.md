@@ -51,11 +51,16 @@ cd robustbench
 pip install .
 cd -
 
-# build Balanced BN
+# build Balanced BN (optional for faster inference speed)
 cd cpp_wrapper/balanced_bn
 pip install .
 cd -
 ```
+
+#### Please Note:
+ Attention to somebody cannot build the cpp version of Balanced BN due to no root privilege or other reasons, the python version of Balanced BN implementation has been released at the files `core/utils/balanced_bn_pyv.py`. Contributed to the use of parallel operations, e.g. `torch.scatter_add_`, the python version of Balanced BN implementation also enjoy the fast inference speed. Therefore, you don't have to worry that you cannot compile the `cpp_wrapper/balanced_bn`. Sorry for delayed.
+
+
 
 ### Datasets Preparation
 

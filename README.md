@@ -163,12 +163,15 @@ This project is based on the following open-source projects: [rotta](https://git
 If you find our work useful in your research, please consider citing:
 
 ```bibtex
-@misc{su2023realworld,
-      title={Towards Real-World Test-Time Adaptation: Tri-Net Self-Training with Balanced Normalization}, 
-      author={Yongyi Su and Xun Xu and Kui Jia},
-      year={2023},
-      eprint={2309.14949},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@article{Su_Xu_Jia_2024,
+         title={Towards Real-World Test-Time Adaptation: Tri-net Self-Training with Balanced Normalization},
+         author={Su, Yongyi and Xu, Xun and Jia, Kui},
+         journal={Proceedings of the AAAI Conference on Artificial Intelligence},
+         DOI={10.1609/aaai.v38i13.29435},
+         pages={15126-15135}
+         volume={38},
+         number={13},
+         month={Mar.},
+         year={2024},
 }
 ```
